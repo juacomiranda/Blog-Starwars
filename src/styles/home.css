@@ -2,3 +2,9 @@ body {
     background-color: black;
     color: goldenrod;
 }
+
+a {
+    text-decoration: none;
+}
+
+

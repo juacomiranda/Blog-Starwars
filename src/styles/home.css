@@ -1,10 +1,28 @@
-body {
+body, html {
     background-color: black;
     color: goldenrod;
+    height: 100%;
 }
 
 a {
     text-decoration: none;
 }
+
+.container {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container-fluid {
+    background-color: red;
+}
+
+
+
+
+
+
 
 

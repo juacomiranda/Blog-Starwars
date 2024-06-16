@@ -21,11 +21,11 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div className="d-flex flex-column min-vh-100">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
-					<Routes className="contenido">
+					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/personajes" element={<Personajes />} />
 						<Route path="/vehiculos" element={<Cars />} />

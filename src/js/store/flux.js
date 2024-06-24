@@ -2,6 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			personajes: [],
+			vehiculos: [],
+			planetas: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -20,6 +22,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://www.swapi.tech/api/people/")
 				.then(response => response.json())
 				.then(result => setStore({personajes:result.results}))
+				.catch(err => console.error(err));
+			},
+
+			getVehiculos: () => {
+				fetch("https://www.swapi.tech/api/vehicles/")
+				.then(response => response.json())
+				.then(result => setStore({vehiculos:result.results}))
+				.catch(err => console.error(err));
+			},
+
+			getPlanetas: () => {
+				fetch("https://www.swapi.tech/api/planets/")
+				.then(response => response.json())
+				.then(result => setStore({planetas:result.results}))
 				.catch(err => console.error(err));
 			},
 

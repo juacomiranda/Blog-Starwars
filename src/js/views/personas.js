@@ -11,7 +11,7 @@ export const Personajes = () => {
         <h1>Personajes</h1>
             <div className="row row-cols-1 row-cols-md-3 g-4 mt-1 mb-5">
                 {store.personajes.map((obj, index) => (  
-                    <Card nombre = {obj.name} />
+                    <Card title = {obj.name} />
                 ))}
             </div>
     </div>

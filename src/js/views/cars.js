@@ -10,7 +10,7 @@ export const Cars = () => {
           <h1>Vehículos</h1>
               <div className="row row-cols-1 row-cols-md-3 g-4 mt-1 mb-5">
                   {store.vehiculos.map((obj, index) => (  
-                      <Card title = {obj.name} />
+                      <Card title = {obj.name}  />
                   ))}
               </div>
       </div>

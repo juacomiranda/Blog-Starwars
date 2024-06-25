@@ -9,10 +9,12 @@ export const Card = (props) => {
     return (
     <div className="col">
             <div className="card h-100">
-                <img src={rigoImage} className="card-img-top" alt="personajes" />
+                <img src={props.images} className="card-img-top" alt="personajes" />
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
-                    <a href="#" className="btn btn-danger">Saber más</a>
+                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Saber más
+                    </button>
                 </div>
             </div>   
             </div>

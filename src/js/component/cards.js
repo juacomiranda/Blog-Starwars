@@ -12,7 +12,7 @@ export const Card = (props) => {
                 <img src={props.images} className="card-img-top" alt="personajes" />
                 <div className="card-body">
                     <h5 className="card-title">{props.title}</h5>
-                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#${props.modalId}`}>
                         Saber más
                     </button>
                 </div>

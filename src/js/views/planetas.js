@@ -15,7 +15,7 @@ export const Planetas = () => {
           return (
             <React.Fragment key={index}>
               <Card title={obj.name} images={`https://starwars-visualguide.com/assets/img/planets/${index + 1}.jpg`} modalId={modalId} />
-              <Detalles id={modalId} title={obj.name} content="Hola como estas soy......." />
+              <Detalles id={modalId} title={obj.name} content="Este planeta es....." />
             </React.Fragment>
           );
         })}

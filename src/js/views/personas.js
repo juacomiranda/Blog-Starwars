@@ -16,7 +16,12 @@ export const Personajes = () => {
                 return (
                   <React.Fragment key={index}>
                     <Card title={obj.name} images={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`} modalId={modalId} />
-                    <Detalles id={modalId} title={obj.name} images={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`} modalId={modalId} content="Este planeta es....." />
+                    <Detalles id={modalId} 
+                              title={obj.name} 
+                              contenido="Hola"
+                              images={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}  
+                              year={obj.birth_year}
+                              />  
                   </React.Fragment>
                 );
               })}

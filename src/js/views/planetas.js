@@ -14,8 +14,8 @@ export const Planetas = () => {
           const modalId = `modal-${index + 1}`;
           return (
             <React.Fragment key={index}>
-              <Card title={obj.name} images={`https://starwars-visualguide.com/assets/img/planets/${index + 1}.jpg`} modalId={modalId} />
-              <Detalles id={modalId} title={obj.name} content="Este planeta es....." />
+              <Card title={obj.name} images={`https://starwars-visualguide.com/assets/img/planets/${index + 2}.jpg`} modalId={modalId} />
+              <Detalles id={modalId} title={obj.name} contenido="Este planeta es....." creado={obj.created} />
             </React.Fragment>
           );
         })}

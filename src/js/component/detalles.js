@@ -3,8 +3,9 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import '../../styles/home.css';
 
 
-export const Detalles = (props) => {
 
+export const Detalles = (props) => {
+    
 
     return (
         <div className="modal" id={props.id} tabindex="-1">
@@ -20,7 +21,9 @@ export const Detalles = (props) => {
                                 <div className="col">
                                     <img src={props.images} className="modal-img float-start" alt="personaje"></img>                                </div>
                                 <div className="col">
-                                    {props.content}
+                                    {props.contenido}
+                                    {props.title}
+                                    {props.year}
                                 </div>
                             </div>
                         </div>

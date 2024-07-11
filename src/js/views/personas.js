@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import { Context } from "../store/appContext";
 import { Card } from "../component/cards";
 import { Detalles } from '../component/detalles';
@@ -6,6 +6,9 @@ import { Detalles } from '../component/detalles';
 
 export const Personajes = () => {
     const {store, actions} = useContext (Context);
+    useEffect(()=>{
+      console.log(store.peopleid)
+    },[])
 
   return (  
     <div className="container flex-fill text-center">

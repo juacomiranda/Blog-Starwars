@@ -12,7 +12,7 @@ export const Card = ({ title, images, modalId, onClick }) => {
                         className="btn btn-primary"
                         data-bs-toggle="modal"
                         data-bs-target={`#${modalId}`}
-                        onClick={onClick}
+                        //onClick={onClick}
                     >
                         Ver Detalles
                     </button>

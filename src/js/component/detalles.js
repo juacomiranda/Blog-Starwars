@@ -8,7 +8,7 @@ export const Detalles = (props) => {
     
 
     return (
-        <div className="modal" id={props.id} tabindex="-1">
+        <div className="modal" id={props.id} tabIndex="-1">
             <div className="modal-dialog">
                 <div className="modal-content">
                     <div className="modal-header">

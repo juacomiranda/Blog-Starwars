@@ -5,16 +5,10 @@ import { Detalles } from '../component/detalles';
 
 export const Personajes = () => {
     const { store, actions } = useContext(Context);
-    const [selectedPersonId, setSelectedPersonId] = useState(null);
-
-    const handleCardClick = (id) => {
-        setSelectedPersonId(id);
-        actions.getPeopleId(id);
-    };
-
-    useEffect (()=>{
-        console.log(store.peopleid)
-    },[])
+    
+    useEffect(() => {
+            console.log('Name:', store.peopleid.name); 
+    }, []); 
 
     return (
         <div className="container flex-fill text-center">
@@ -28,14 +22,14 @@ export const Personajes = () => {
                                 title={obj.name}
                                 images={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
                                 modalId={modalId}
-                                onClick={() => handleCardClick(obj.uid)} // Asegúrate de pasar el ID correcto
+                               // onClick={() => handleCardClick(obj.uid)}
                             />
                             <Detalles
                                 id={modalId}
-                                title={store.peopleid ? store.peopleid.name : ""}
+                                title={obj.name}
                                 contenido="Hola"
-                                images={store.peopleid ? `https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg` : ""}
-                                year={store.peopleid ? store.peopleid.birth_year : ""}
+                                images={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
+                                //year={store.peopleid}
                             />
                         </React.Fragment>
                     );

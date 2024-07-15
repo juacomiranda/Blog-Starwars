@@ -45,7 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.then(response => response.json())
 				.then(result =>	{
 					setStore({peopleid:result.result.properties})
-					console.log('Nombre:', result.result.properties.name);
+					console.log('Nombre:', result.result.properties);
 				})
 				.catch(err => console.error(err));
 			},

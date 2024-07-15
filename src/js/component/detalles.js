@@ -21,9 +21,11 @@ export const Detalles = (props) => {
                                 <div className="col">
                                     <img src={props.images} className="modal-img float-start" alt="personaje"></img>                                </div>
                                 <div className="col">
-                                    {props.contenido}
-                                    {props.title}
-                                    {props.year}
+                                    {props.nombre}
+                                    {props.estatura}
+                                    {props.nacimiento}
+                                    {props.genero}
+                                    {props.mundo}
                                 </div>
                             </div>
                         </div>

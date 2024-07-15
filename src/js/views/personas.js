@@ -6,9 +6,6 @@ import { Detalles } from '../component/detalles';
 export const Personajes = () => {
     const { store, actions } = useContext(Context);
     
-    useEffect(() => {
-            console.log('Name:', store.peopleid.name); 
-    }, []); 
 
     return (
         <div className="container flex-fill text-center">
@@ -21,17 +18,19 @@ export const Personajes = () => {
                             <Card
                                 title={obj.name}
                                 images={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
-                                modalId={modalId}
-                               // onClick={() => handleCardClick(obj.uid)}
-                            />
-                            <Detalles
-                                id={modalId}
-                                title={obj.name}
-                                contenido="Hola"
-                                images={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
-                                //year={store.peopleid}
-                            />
+                               // modalId={modalId}
+                                onClick={obj.uid}
+                            />  
                         </React.Fragment>
+                  /*       <Detalles
+                                    id={modalId}
+                                    nombre={obj.name}
+                                    estatura={obj.height}
+                                    nacimiento={obj.birth_year}
+                                    genero={obj.gender}
+                                    mundo={obj.mass}
+                                    images={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}       
+                    />*/
                     );
                 })}
             </div>

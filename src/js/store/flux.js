@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			personajes: [],
 			vehiculos: [],
 			planetas: [],
-			peopleid: {}, // corregir
+			peopleid: {}, 
 			demo: [
 				{
 					title: "FIRST",
@@ -40,12 +40,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.catch(err => console.error(err));
 			},
 
-			getPeopleId: () => {
-				fetch(`https://www.swapi.tech/api/people/1`)
+			getPeopleId: (id) => {
+				fetch(`https://www.swapi.tech/api/people/${id}`)
 				.then(response => response.json())
 				.then(result =>	{
 					setStore({peopleid:result.result.properties})
-					console.log('Nombre:', result.result.properties);
+					console.log('Nombre:', getStore().peopleid);
 				})
 				.catch(err => console.error(err));
 			},

@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
+import { Context } from "../store/appContext";
 import rigoImage from "../../img/rigo-baby.jpg";
 import '../../styles/home.css';
 
 
 
 export const Detalles = (props) => {
-    
+    const {store, action} = useContext (Context);
 
     return (
         <div className="modal" id={props.id} tabIndex="-1">
@@ -21,11 +22,10 @@ export const Detalles = (props) => {
                                 <div className="col">
                                     <img src={props.images} className="modal-img float-start" alt="personaje"></img>                                </div>
                                 <div className="col">
-                                    {props.nombre}
-                                    {props.estatura}
-                                    {props.nacimiento}
-                                    {props.genero}
-                                    {props.mundo}
+                                    {store.peopleid.name}<br/>
+                                    {store.peopleid.gender}<br/>
+                                    {store.peopleid.height}
+                                    
                                 </div>
                             </div>
                         </div>

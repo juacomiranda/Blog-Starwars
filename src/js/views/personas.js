@@ -24,13 +24,14 @@ export const Personajes = () => {
                             /> 
                             <Detalles
                                     id={modalId}
-                                    nombre={obj.name}
-                                    estatura={obj.height}
-                                    nacimiento={obj.birth_year}
-                                    genero={obj.gender}
-                                    mundo={obj.mass}
+                                    nombre={store.peopleid.name}
+                                    genero={store.peopleid.gender}
+                                    estatura={store.peopleid.height}
+                                    pelo={store.peopleid.hair_color}
+                                    ojos={store.peopleid.eye_color}
+                                    nacimiento={store.peopleid.birth_year}
                                     images={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}       
-                    /> 
+                    />  
                         </React.Fragment>
                     );
 

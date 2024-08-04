@@ -22,10 +22,13 @@ export const Detalles = (props) => {
                                 <div className="col">
                                     <img src={props.images} className="modal-img float-start" alt="personaje"></img>                                </div>
                                 <div className="col">
-                                    {store.peopleid.name}<br/>
-                                    {store.peopleid.gender}<br/>
-                                    {store.peopleid.height}
-                                    
+                                    Nombre: {props.nombre}<br/>
+                                    Genero: {props.genero}<br/>
+                                    Estatura: {props.estatura}<br/>
+                                    Color de pelo: {props.pelo}<br/>                                    
+                                    Color de ojos: {props.ojos}<br/>                                    
+                                    Año de nacimiento: {props.nacimiento}<br/>
+                                    Multitud: {props.crew}<br/>                                                                      
                                 </div>
                             </div>
                         </div>

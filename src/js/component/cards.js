@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import { Context } from '../store/appContext';
 
 
-export const Card = ({ title, images, modalId, onClick, uid }) => {
+export const Card = ({ title, images, modalId, uid }) => {
     const { store, actions } = useContext(Context);
 
     return (
@@ -17,7 +17,6 @@ export const Card = ({ title, images, modalId, onClick, uid }) => {
                         data-bs-toggle="modal"
                         data-bs-target={`#${modalId}`}
                         onClick={()=> actions.getPeopleId(uid)}
-
                     >
                         Ver Detalles
                     </button>
